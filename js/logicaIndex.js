@@ -31,8 +31,31 @@ $(function(){
 
 	$('a#recordarDatos').click(function() {
 		var pMensajeModal = $('#mensaje-modal');
-		var lista = JSON.stringify(json.usuarios);
-		mostrarModal("Usuarios Registrados", lista);
+		var users = [
+			{
+				"cedula" : "11110000",
+				"contrasena" : "1100",
+				"tipo" : "jurado"
+			},
+			{
+				"cedula" : "11112222",
+				"contrasena" : "1122",
+				"tipo" : "jurado"
+			},
+			{
+				"cedula" : "11223344",
+				"contrasena" : "1234",
+				"tipo" : "votante"
+			},
+			{
+				"cedula" : "22224444",
+				"contrasena" : "2244",
+				"tipo" : "votante"
+			}
+
+		];			
+		var lista = JSON.stringify(users);
+		mostrarModal("Usuarios Por Defecto", lista);
 	});
 
 });
